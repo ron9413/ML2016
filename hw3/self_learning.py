@@ -47,7 +47,7 @@ def load_label(data, split=0.1):
    for i in range(1, len(data_arr)):
       train_reshape = data_arr[i][:nb_train_samples].reshape(nb_train_samples, 3, 32, 32).transpose(0, 2, 3, 1)
       val_reshape = data_arr[i][nb_train_samples:].reshape(nb_val_samples, 3, 32, 32).transpose(0, 2, 3, 1)
-      X_train = np.concatenate((X_train, train.reshape))
+      X_train = np.concatenate((X_train, train_reshape))
       y_train = np.concatenate((y_train, i*np.ones((nb_train_samples,), dtype=np.int8)))
       X_val = np.concatenate((X_val, val_reshape))
       y_val = np.concatenate((y_val, i*np.ones((nb_val_samples,), dtype=np.int8)))
