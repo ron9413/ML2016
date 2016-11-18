@@ -178,7 +178,7 @@ if __name__ == "__main__":
    mc = ModelCheckpoint(filepath=dnn_name+"_weights.h5", monitor='val_acc', save_best_only=True, verbose=0)
 
    model = dnn()
-   open('dnn.json', 'w').write(model.to_json())
+   open(dnn_name+'.json', 'w').write(model.to_json())
    weights = None
    num_iter = 5
    train_epoch = 100
