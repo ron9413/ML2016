@@ -1,1 +1,1 @@
-KERAS_BACKEND=tensorflow python2 auto_encoder.py $1 $2
+KERAS_BACKEND=tensorflow python2 auto_encoder.py $1 $2 $3
